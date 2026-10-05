@@ -8,6 +8,17 @@ Videos for LinkedIn, made with code. Read this whole file before making or editi
 - Commits: no `Co-Authored-By`, `Claude-Session` or other Claude attribution trailers. Plain commit messages only.
 - Commit source, not MP4s. Renders go in `renders/` or `out/` (gitignored); send the MP4 to the user directly.
 
+## Cloud and local: keeping in sync
+
+The user works both in Claude Code cloud sessions and on their own machine. GitHub `main` is the single source of truth.
+
+- When the user says "sync" (or asks to pull or push the latest): run `git pull --rebase origin main`, commit any finished work, then `git push origin main`. Report what came in and what went out.
+- Before starting a new video in any session, pull first so `CLAUDE.md` and earlier videos are current.
+- After finishing or changing a video, commit and push so the other side can pick it up.
+- On a merge conflict in `CLAUDE.md`, keep both sides' log entries.
+- Rendered MP4s are not in git; re-render from source on the other machine if needed.
+- First-time local setup: `scripts/setup-local.sh` (add `--extras` for Kokoro TTS and whisper.cpp).
+
 ## Engines
 
 - `hyperframes/`: HyperFrames (HTML + GSAP). Default for LinkedIn explainers and motion graphics. Start with the `/hyperframes` skill; see `hyperframes/CLAUDE.md`.
@@ -25,7 +36,7 @@ Videos for LinkedIn, made with code. Read this whole file before making or editi
 ## Environment (cloud sandbox)
 
 - Network blocks CDNs (cdn.jsdelivr.net) and huggingface.co. Vendor JS/CSS/fonts into the project's `assets/` via `npm pack <pkg>` from npm. GSAP: `assets/vendor/gsap.min.js`. Fonts: `@fontsource/inter` woff2 files in `assets/fonts/` with in-file `@font-face`.
-- Chrome comes from `HYPERFRAMES_BROWSER_PATH` / `REMOTION_BROWSER_EXECUTABLE`, set by `.claude/hooks/session-start.sh`. Never run `npx hyperframes browser ensure`.
+- Chrome comes from `HYPERFRAMES_BROWSER_PATH` / `REMOTION_BROWSER_EXECUTABLE`, set by `.claude/hooks/session-start.sh`. In the cloud, never run `npx hyperframes browser ensure`; locally it is fine (`scripts/setup-local.sh` runs it).
 - Extras: `scripts/install-extras.sh` (whisper | tts | music). Kokoro TTS works here. Whisper and MusicGen need huggingface.co, which is blocked, so no transcription and no generated music unless the host is allowlisted.
 - No background music source is available here. Ask the user for a track if music is wanted.
 
@@ -78,6 +89,7 @@ The user asked for: **Apple style, clean, minimalist, has hooks, understandable.
 - 2026-10-03: Replace "CMD" with "CEO" in the Ideas-get-lost video (on screen and in the voiceover).
 - 2026-10-05: Use this repo for all work; no Claude attribution trailers in commits; keep this file updated and use it for every new video.
 - 2026-10-05: Installed video-shotcraft, six iart-ai motion-skills packs and the awesome-opus5-5-videos prompt library (user approved).
+- 2026-10-05: Added local setup (`scripts/setup-local.sh`) and the "sync" workflow so the user can work locally and in the cloud.
 - 2026-10-05: Every video from now on must be under 1 minute, catchy and insightful. (Ideas get lost, at 70s, predates this rule.)
 
 ## Video log

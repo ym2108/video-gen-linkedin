@@ -9,6 +9,19 @@ Make videos with code, using two engines side by side:
 
 Requirements: Node.js 22+, FFmpeg.
 
+## Local setup
+
+Requirements: Git, Node.js 22+, FFmpeg (macOS: `brew install ffmpeg`). On Windows, use WSL.
+
+```bash
+git clone https://github.com/ym2108/video-gen-linkedin.git
+cd video-gen-linkedin
+scripts/setup-local.sh            # Remotion deps + headless Chrome
+scripts/setup-local.sh --extras   # optional: Kokoro voiceover + whisper.cpp
+```
+
+Then open the folder in Claude Code. The skills in `.claude/skills/` load automatically, and `CLAUDE.md` carries the house style and history. Say **"sync"** to pull the latest work from GitHub and push yours.
+
 ## Remotion
 
 ```bash
