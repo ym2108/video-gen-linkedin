@@ -14,6 +14,14 @@ Videos for LinkedIn, made with code. Read this whole file before making or editi
 - `remotion/`: Remotion (React/TS). Use for data-driven or templated videos. Use the `remotion-*` skills. Register compositions in `src/Root.tsx`; render with `npx remotion render <Id> out/<name>.mp4`.
 - Each video is its own HyperFrames project under `hyperframes/videos/<kebab-name>/`.
 
+## Installed skills and references
+
+- Core: `hyperframes*`, `media-use`, `remotion-*`.
+- `video-shotcraft` (Vincentwei1021/video-shotcraft): cinematic product-video shot recipes, template and audio assets (Remotion). Use its shot cards for camera moves and transitions.
+- iart-ai motion-skills packs: `explainer-video`, `isometric-animation`, `whiteboard-animation`, `diagram-animation`, `wrapped-video`, `chart-animation`, `presentation-video`, `animated-infographic`, `kinetic-typography`, `remotion-video`, `animation-principles`, `motion-background`, `beat-sync-editing`, `logo-animation`, `motion-art-direction`, `color-motion`, `shot-composition`, `testimonial-video`, `launch-video`, `ad-creative-video`, `javascript-animation`, `soundtrack`. (`after-effects` skipped: not usable here.)
+- `soundtrack` makes music in code: use it for a background bed, since no music library or MusicGen is available here.
+- `references/awesome-opus5-5-videos/`: 475 prompts from popular Claude-made videos (`prompts/`, `data/videos.json`). Browse it for catchy hooks and visual ideas before storyboarding.
+
 ## Environment (cloud sandbox)
 
 - Network blocks CDNs (cdn.jsdelivr.net) and huggingface.co. Vendor JS/CSS/fonts into the project's `assets/` via `npm pack <pkg>` from npm. GSAP: `assets/vendor/gsap.min.js`. Fonts: `@fontsource/inter` woff2 files in `assets/fonts/` with in-file `@font-face`.
@@ -69,6 +77,7 @@ The user asked for: **Apple style, clean, minimalist, has hooks, understandable.
 - 2026-10-02: First video brief: "Apple style video, clean, minimalistic, have hooks and understandable."
 - 2026-10-03: Replace "CMD" with "CEO" in the Ideas-get-lost video (on screen and in the voiceover).
 - 2026-10-05: Use this repo for all work; no Claude attribution trailers in commits; keep this file updated and use it for every new video.
+- 2026-10-05: Installed video-shotcraft, six iart-ai motion-skills packs and the awesome-opus5-5-videos prompt library (user approved).
 - 2026-10-05: Every video from now on must be under 1 minute, catchy and insightful. (Ideas get lost, at 70s, predates this rule.)
 
 ## Video log
