@@ -26,7 +26,8 @@ Videos for LinkedIn, made with code. Read this whole file before making or editi
 The user asked for: **Apple style, clean, minimalist, has hooks, understandable.**
 
 - Format: square 1080×1080 for the LinkedIn feed (offer 4:5 if they want more feed space).
-- Length: about 60–70s for a ~140-word script.
+- Length: always under 60 seconds (hard limit; target 45–55s). If the script is too long for that, tighten it for the voiceover and on-screen text while keeping its meaning, and tell the user what was cut.
+- Tone: catchy and insightful. Open on the sharpest tension or surprising fact, give one clear insight, end on a punchy takeaway or question. Cut anything that doesn't earn its seconds.
 - Palette: paper `#f5f5f7`, ink `#1d1d1f`, muted `#6e6e73`, line `#d2d2d7`, one accent blue `#0071e3` (`#2997ff` on black). Use a black ground for the story or case-study section for contrast, then return to light for the lesson.
 - Type: Inter 600/700, tight tracking (-0.03 to -0.045em). Big headlines (88–112px), one idea per screen, generous margins (96px sides).
 - Motion: soft rise out of blur (y 32 to 0, blur 12px to 0, `power3.out`, about 0.9s). Scene exits fade with a slight blur. Never busy.
@@ -68,6 +69,7 @@ The user asked for: **Apple style, clean, minimalist, has hooks, understandable.
 - 2026-10-02: First video brief: "Apple style video, clean, minimalistic, have hooks and understandable."
 - 2026-10-03: Replace "CMD" with "CEO" in the Ideas-get-lost video (on screen and in the voiceover).
 - 2026-10-05: Use this repo for all work; no Claude attribution trailers in commits; keep this file updated and use it for every new video.
+- 2026-10-05: Every video from now on must be under 1 minute, catchy and insightful. (Ideas get lost, at 70s, predates this rule.)
 
 ## Video log
 
